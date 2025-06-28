@@ -39,9 +39,9 @@ Due to access constraints, we simulate the dataset by creating mock `.img` files
    python -m unittest test_lunar_kmeans.py
 4. Unit Test Output
     Clustering completes successfully and prints:
-       - K-Means clustering completed with 3 clusters.
-       - A scatter plot is displayed showing the 2D PCA-transformed clusters into file: kmeans_pca_plot.png
-       - A unit testing result is generated into file: unit_test_results.txt
+   - K-Means clustering completed with 3 clusters.
+   - A scatter plot is displayed showing the 2D PCA-transformed clusters into file: kmeans_pca_plot.png
+   - A unit testing result is generated into file: unit_test_results.txt
 
 ## Requirements
    - Python 3.8+
