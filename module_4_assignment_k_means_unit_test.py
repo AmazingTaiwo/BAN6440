@@ -1,3 +1,12 @@
+#   BAN6440 Applied Machine Learning for Analytics
+#   Module 4 Assignment - K-Means Python Application
+#   Name: Taiwo Babalola
+#   Learner ID: 162894
+#   Submitted to: Rapheal Wanjiku
+#   AppName: module_4_assignment_k_means_unit_test.py
+#   Author Taiwo Babalola
+
+
 import unittest
 import os
 import numpy as np
@@ -43,5 +52,19 @@ class TestLunarKMeans(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             extract_mock_features("non_existent_dir")
 
+# Redirect output to a log file
+with open("unit_test_results.txt", "w") as f:
+    runner = unittest.TextTestRunner(stream=f, verbosity=2)
+    suite = unittest.defaultTestLoader.discover('.', pattern='test_*.py')  # adjust if your test file is named differently
+    result = runner.run(suite)
+
 if __name__ == "__main__":
-    unittest.main()
+    # Run unit tests and save output to a log file
+    with open("unit_test_results.txt", "w") as f:
+        runner = unittest.TextTestRunner(stream=f, verbosity=2)
+        suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestLunarKMeans)
+        runner.run(suite)
+
+    # Also print results to console
+    with open("unit_test_results.txt", "r") as f:
+        print(f.read())

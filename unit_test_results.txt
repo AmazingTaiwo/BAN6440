@@ -1,0 +1,13 @@
+test_error_on_missing_directory (__main__.TestLunarKMeans)
+Test that missing directory raises FileNotFoundError. ... ok
+test_error_on_too_few_samples (__main__.TestLunarKMeans)
+Test that clustering fails with too few samples. ... ok
+test_feature_extraction_shape (__main__.TestLunarKMeans)
+Test that correct number of features are extracted. ... ok
+test_kmeans_cluster_count (__main__.TestLunarKMeans)
+Test K-Means returns correct number of cluster labels. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.213s
+
+OK

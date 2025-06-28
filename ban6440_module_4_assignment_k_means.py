@@ -1,3 +1,12 @@
+#   BAN6440 Applied Machine Learning for Analytics
+#   Module 4 Assignment - K-Means Python Application
+#   Name: Taiwo Babalola
+#   Learner ID: 162894
+#   Submitted to: Rapheal Wanjiku
+
+#   AppName: ban6440_module_4_assignment_k_means.py
+#   Author Taiwo Babalola
+
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -70,6 +79,19 @@ def plot_clusters(data, labels):
     plt.title("K-Means Clusters of Lunar Data")
     plt.xlabel("PCA 1")
     plt.ylabel("PCA 2")
+    plt.show()
+
+def plot_clusters(data, labels, save_path="kmeans_pca_plot.png"):
+    pca = PCA(n_components=2)
+    reduced = pca.fit_transform(data)
+    plt.figure(figsize=(8, 6))
+    plt.scatter(reduced[:, 0], reduced[:, 1], c=labels, cmap='viridis', edgecolor='k', s=60)
+    plt.title("K-Means Clusters of Lunar Data")
+    plt.xlabel("PCA 1")
+    plt.ylabel("PCA 2")
+    plt.tight_layout()
+    plt.savefig(save_path)  # Save the plot
+    print(f"[INFO] Cluster plot saved as '{save_path}'")
     plt.show()
 
 #   Main flow
