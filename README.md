@@ -24,6 +24,8 @@ Due to access constraints, we simulate the dataset by creating mock `.img` files
   ├── kaguya_monoscopic_uncontrolled_observations/ # Simulated lunar files
   ├── AppName: ban6440_module_4_assignment_k_means.py # Main application code
   ├── AppName: module_4_assignment_k_means_unit_test.py # Unit tests
+  ├── kmeans_pca_plot.png
+  ├── unit_test_results.txt
   ├── README.md
 
 
@@ -35,10 +37,11 @@ Due to access constraints, we simulate the dataset by creating mock `.img` files
     python ban6440_module_4_assignment_k_means.py
 3. Run unit tests:
    python -m unittest test_lunar_kmeans.py
-4. Sample Output
+4. Unit Test Output
     Clustering completes successfully and prints:
-      [INFO] K-Means clustering completed with 3 clusters.
-      A scatter plot is displayed showing the 2D PCA-transformed clusters.
+       - K-Means clustering completed with 3 clusters.
+       - A scatter plot is displayed showing the 2D PCA-transformed clusters into file: kmeans_pca_plot.png
+       - A unit testing result is generated into file: unit_test_results.txt
 
 ## Requirements
    - Python 3.8+
